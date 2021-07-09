@@ -1,43 +1,41 @@
-
-
+import React from "react";
+import { useSelector } from "react-redux";
+import { BrowserRouter, Link, Route } from "react-router-dom";
+import CartScreen from "./screens/CartScreen";
+import HomeScreen from "./screens/HomeScreen";
+import ProductScreen from "./screens/ProductScreen";
 
 function App() {
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+
   return (
-    <div className="grid-container">
-      <header className="row">
-        <div>
-          <a className="brand" href="index.html">MERN eCommerce</a>
-        </div>
-        <div>
-          <a href="cart.html">Cart</a>
-          <a href="signin.html">Sign In</a>
-        </div>
-      </header>
-      <main>
-        <div className="row center">
-          <div className="card">
-            <a href="product.html">
-              {/* <!-- image size: 680px by 830px --> */}
-              <img className="medium" src="./images/product-1.jpg" alt="product" />
-            </a>
-            <div className="card-body">
-              <a href="product.html">
-                <h2>Slim Shirts</h2>
-              </a>
-              <div className="rating">
-                <span><i className="fa fa-star"></i></span>
-                <span><i className="fa fa-star"></i></span>
-                <span><i className="fa fa-star"></i></span>
-                <span><i className="fa fa-star"></i></span>
-                <span><i className="fa fa-star"></i></span>
-              </div>
-              <div className="price">$120</div>
-            </div>
+    <BrowserRouter>
+      <div className='grid-container'>
+        <header className='row'>
+          <div>
+            <Link className='brand' href='index.html'>
+              MERN eCommerce
+            </Link>
           </div>
-        </div>
-      </main>
-      <footer className="row center">All right reseerved</footer>
-    </div>
+          <div>
+            <Link to='/cart'>
+              Cart
+              {cartItems.length > 0 && (
+                <span className='badge'>{cartItems.length}</span>
+              )}
+            </Link>
+            <Link to='/signin'>Sign In</Link>
+          </div>
+        </header>
+        <main>
+          <Route path='/cart/:id?' component={CartScreen}></Route>
+          <Route path='/product/:id' component={ProductScreen}></Route>
+          <Route path='/' component={HomeScreen} exact></Route>
+        </main>
+        <footer className='row center'>All right reserved</footer>
+      </div>
+    </BrowserRouter>
   );
 }
 
