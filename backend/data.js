@@ -1,4 +1,19 @@
+import bcrypt from "bcrypt";
 const data = {
+  users: [
+    {
+      name: "Rramirous",
+      email: "rramirous@iduslocus.com",
+      password: bcrypt.hashSync("Basirismygod", 8),
+      isAdmin: true,
+    },
+    {
+      name: "jhon",
+      email: "jhon@email.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
       _id: "1",
@@ -6,7 +21,7 @@ const data = {
       category: "Shirts",
       image: "/images/product-1.jpg",
       price: 120,
-      countInStock:0,
+      countInStock: 0,
       brand: "xx",
       rating: 4.5,
       numReviews: 10,
@@ -18,7 +33,7 @@ const data = {
       category: "Shirts",
       image: "/images/product-1.jpg",
       price: 120,
-      countInStock:10,
+      countInStock: 10,
       brand: "xx",
       rating: 4.5,
       numReviews: 10,
@@ -30,7 +45,7 @@ const data = {
       category: "Shirts",
       image: "/images/product-1.jpg",
       price: 120,
-      countInStock:10,
+      countInStock: 10,
       brand: "xx",
       rating: 4.5,
       numReviews: 10,
@@ -42,7 +57,7 @@ const data = {
       category: "Shirts",
       image: "/images/product-1.jpg",
       price: 120,
-      countInStock:0,
+      countInStock: 0,
       brand: "xx",
       rating: 4.5,
       numReviews: 10,
@@ -54,7 +69,7 @@ const data = {
       category: "Shirts",
       image: "/images/product-1.jpg",
       price: 120,
-      countInStock:10,
+      countInStock: 10,
       brand: "xx",
       rating: 4.5,
       numReviews: 10,
@@ -66,7 +81,7 @@ const data = {
       category: "Shirts",
       image: "/images/product-1.jpg",
       price: 120,
-      countInStock:10,
+      countInStock: 10,
       brand: "xx",
       rating: 4.5,
       numReviews: 10,
@@ -78,7 +93,7 @@ const data = {
       category: "Shirts",
       image: "/images/product-1.jpg",
       price: 120,
-      countInStock:10,
+      countInStock: 10,
       brand: "xx",
       rating: 4.5,
       numReviews: 10,
@@ -87,4 +102,3 @@ const data = {
   ],
 };
 export default data;
-
