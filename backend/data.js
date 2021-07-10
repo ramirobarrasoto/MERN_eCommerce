@@ -16,8 +16,8 @@ const data = {
   ],
   products: [
     {
-      _id: "1",
-      name: "Slim Shirt",
+     
+      name: "Slim",
       category: "Shirts",
       image: "/images/product-1.jpg",
       price: 120,
@@ -25,11 +25,11 @@ const data = {
       brand: "xx",
       rating: 4.5,
       numReviews: 10,
-      descrption: "high quality product",
+      description: "high quality product",
     },
     {
-      _id: "2",
-      name: "Slim Shirt",
+      
+      name: "Puma Shirt",
       category: "Shirts",
       image: "/images/product-1.jpg",
       price: 120,
@@ -37,11 +37,11 @@ const data = {
       brand: "xx",
       rating: 4.5,
       numReviews: 10,
-      descrption: "high quality product",
+      description: "high quality product",
     },
     {
-      _id: "3",
-      name: "Slim Shirt",
+      
+      name: "Shirt",
       category: "Shirts",
       image: "/images/product-1.jpg",
       price: 120,
@@ -49,11 +49,11 @@ const data = {
       brand: "xx",
       rating: 4.5,
       numReviews: 10,
-      descrption: "high quality product",
+      description: "high quality product",
     },
     {
-      _id: "4",
-      name: "Slim Shirt",
+      
+      name: "Commun Shirt",
       category: "Shirts",
       image: "/images/product-1.jpg",
       price: 120,
@@ -61,11 +61,11 @@ const data = {
       brand: "xx",
       rating: 4.5,
       numReviews: 10,
-      descrption: "high quality product",
+      description: "high quality product",
     },
     {
-      _id: "5",
-      name: "Slim Shirt",
+      
+      name: "Tinny Shirt",
       category: "Shirts",
       image: "/images/product-1.jpg",
       price: 120,
@@ -73,11 +73,11 @@ const data = {
       brand: "xx",
       rating: 4.5,
       numReviews: 10,
-      descrption: "high quality product",
+      description: "high quality product",
     },
     {
-      _id: "6",
-      name: "Slim Shirt",
+      
+      name: "Nice",
       category: "Shirts",
       image: "/images/product-1.jpg",
       price: 120,
@@ -85,11 +85,11 @@ const data = {
       brand: "xx",
       rating: 4.5,
       numReviews: 10,
-      descrption: "high quality product",
+      description: "high quality product",
     },
     {
-      _id: "7",
-      name: "Slim Shirt",
+      
+      name: "Daddy",
       category: "Shirts",
       image: "/images/product-1.jpg",
       price: 120,
@@ -97,7 +97,7 @@ const data = {
       brand: "xx",
       rating: 4.5,
       numReviews: 10,
-      descrption: "high quality product",
+      description: "high quality product",
     },
   ],
 };
