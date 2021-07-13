@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import process from 'dotenv';
+//import process from 'dotenv';
 
 
 export const generateToken = (user) => {
