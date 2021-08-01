@@ -6,7 +6,7 @@ import {
   productListReducer,
   productDetailsReducer,
 } from "./reducers/productReducers";
-import { userSigninReducer } from "./reducers/userReducers";
+import { userRegisterReducer, userSigninReducer } from "./reducers/userReducers";
 
 const initialState = {
   userSignin: {
@@ -26,6 +26,7 @@ const reducer = combineReducers({
   cart: cartReducer,
   userSignin: userSigninReducer,
   orderCreate:orderCreateReducer,
+  userRegister: userRegisterReducer,
   orderDetails:orderDetailsReducer,
   orderPay:orderPayReducer,
 });
