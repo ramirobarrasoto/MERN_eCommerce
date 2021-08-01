@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signin } from "../actions/userActions";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
+import LoadingBox from '../components/LoadingBox'
+import MessageBox from '../components/MessageBox'
+
+
 
 export default function SigninSceen(props) {
   const [email, setEmail] = useState("");
@@ -13,7 +15,7 @@ export default function SigninSceen(props) {
     ? props.location.search.split("=")[1]
     : "/";
   const userSignin = useSelector((state) => state.userSignin);
-  const { userInfo, loading, error } = userSignin;
+  const { userInfo, loading,error } = userSignin;
 
   const dispatch = useDispatch();
 
@@ -25,8 +27,9 @@ export default function SigninSceen(props) {
   useEffect(() => {
     if (userInfo) {
       props.history.push(redirect);
-    }
-  }, [props.history, redirect, userInfo]);
+        }
+  }, [props.history,redirect,userInfo]);
+
 
   return (
     <div>
@@ -35,7 +38,7 @@ export default function SigninSceen(props) {
           <h1>Sign In</h1>
         </div>
         {loading && <LoadingBox></LoadingBox>}
-        {error && <MessageBox variant='danger'>{error}</MessageBox>}
+        {error &&<MessageBox variant='danger'>{error}</MessageBox>}
         <div>
           <label htmlFor='email'>Email address</label>
           <input
@@ -65,10 +68,10 @@ export default function SigninSceen(props) {
         <div>
           <label />
           <div>
-            New Customer?{" "}
+          New customer?{' '}
             <Link to={`/register?redirect=${redirect}`}>
               Create your account
-            </Link>
+              </Link>
           </div>
         </div>
       </form>

@@ -43,9 +43,9 @@ export default function OrderScreen(props) {
     }
   }, [dispatch, order, orderId, sdkReady]);
 
-  const successPaymentHandler = (paymentResult) => {
-    dispatch(payOrder(order, paymentResult));
-  };
+  // const successPaymentHandler = (paymentResult) => {
+  //   dispatch(payOrder(order, paymentResult));
+  // };
 
   return loading ? (
     <LoadingBox></LoadingBox>
@@ -168,7 +168,7 @@ export default function OrderScreen(props) {
                       {loadingPay && <LoadingBox></LoadingBox>}
                       <PayPalButton
                         amount={order.totalPrice}
-                        onSuccess={successPaymentHandler}
+                        // onSuccess={successPaymentHandler}
                       ></PayPalButton>
                     </>
                   )}
