@@ -12,7 +12,7 @@ export default function OrderScreen(props) {
   const orderId = props.match.params.id;
   const [sdkReady, setSdkReady] = useState(false);
   const orderPay = useSelector((state) => state.orderPay);
-  const { erro: errorPay, success: successPay, loading: loadingPay } = orderPay;
+  const { error: errorPay, success: successPay, loading: loadingPay } = orderPay;
   const dispatch = useDispatch();
   const orderDetails = useSelector((state) => state.orderDetails);
   const { loading, order, error } = orderDetails;
@@ -41,11 +41,11 @@ export default function OrderScreen(props) {
         }
       }
     }
-  }, [dispatch, order, orderId, sdkReady]);
+  }, [dispatch, order, orderId, sdkReady,successPay]);
 
-  // const successPaymentHandler = (paymentResult) => {
-  //   dispatch(payOrder(order, paymentResult));
-  // };
+  const successPaymentHandler = (paymentResult) => {
+    dispatch(payOrder(order, paymentResult));
+  };
 
   return loading ? (
     <LoadingBox></LoadingBox>
@@ -168,7 +168,7 @@ export default function OrderScreen(props) {
                       {loadingPay && <LoadingBox></LoadingBox>}
                       <PayPalButton
                         amount={order.totalPrice}
-                        // onSuccess={successPaymentHandler}
+                         onSuccess={successPaymentHandler}
                       ></PayPalButton>
                     </>
                   )}
